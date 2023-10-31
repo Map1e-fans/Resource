@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Resources/src-gen" creationIcons="false" editDirectory="/Resources.edit/src-gen"
+    editorDirectory="/Resources.editor/src-gen" modelPluginID="Resources" modelName="Resources"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>resources.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Resources" disposableProviderFactory="true" ecorePackage="resources.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="resources.ecore#//Status">
+      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/fdj"/>
+      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/phy"/>
+      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/gee"/>
+    </genEnums>
+    <genClasses ecoreClass="resources.ecore#//Resources">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resources.ecore#//Resources/vehicles"/>
+    </genClasses>
+    <genClasses ecoreClass="resources.ecore#//Ship"/>
+    <genClasses ecoreClass="resources.ecore#//Ammunition"/>
+    <genClasses ecoreClass="resources.ecore#//Drone"/>
+    <genClasses ecoreClass="resources.ecore#//CarrierAircraft"/>
+    <genClasses ecoreClass="resources.ecore#//Frigate"/>
+    <genClasses ecoreClass="resources.ecore#//Destroyer"/>
+    <genClasses ecoreClass="resources.ecore#//AircraftCarrier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resources.ecore#//AircraftCarrier/carrieraircrafts"/>
+    </genClasses>
+    <genClasses ecoreClass="resources.ecore#//Missile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resources.ecore#//Missile/status"/>
+    </genClasses>
+    <genClasses ecoreClass="resources.ecore#//Shell"/>
+    <genClasses ecoreClass="resources.ecore#//Torpedo"/>
+    <genClasses ecoreClass="resources.ecore#//Reconnaissance"/>
+    <genClasses ecoreClass="resources.ecore#//Strike"/>
+    <genClasses ecoreClass="resources.ecore#//Transport"/>
+    <genClasses ecoreClass="resources.ecore#//Fighter"/>
+    <genClasses ecoreClass="resources.ecore#//Recon"/>
+    <genClasses ecoreClass="resources.ecore#//Helicopter"/>
+    <genClasses ecoreClass="resources.ecore#//Vehicle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resources.ecore#//Vehicle/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resources.ecore#//Vehicle/ammunitions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
