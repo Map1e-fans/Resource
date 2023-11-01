@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Resources" version="12.0.0.2017041100">
+  <ownedViewpoints name="ResourceModel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ResourceDiagram" domainClass="resources::Resources" enablePopupBars="true">
+      <metamodel href="../../Resources/model/resources.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Vehicle" domainClass="resources::Vehicle">
+          <borderedNodeMappings name="Missile" semanticCandidatesExpression="feature:eAllContents" domainClass="resources::Missile">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="Shell" semanticCandidatesExpression="feature:eAllContents" domainClass="resources::Shell">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="Torpedo" semanticCandidatesExpression="feature:eAllContents" domainClass="resources::Torpedo">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            </style>
+          </borderedNodeMappings>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Ship" domainClass="resources::Ship" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Torpedo']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']"/>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Frigate" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Torpedo']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Ship']">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Destroyer" domainClass="resources::Destroyer" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Torpedo']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Ship']">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="AircraftCarrier" domainClass="resources::AircraftCarrier" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Torpedo']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Ship']">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Drone" domainClass="resources::Drone" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']"/>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Strike" domainClass="resources::Strike" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Drone']">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Reconnaissance" domainClass="resources::Reconnaissance" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Drone']">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Transport" domainClass="resources::Transport" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Drone']">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="CarrierAircraft" domainClass="resources::CarrierAircraft" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']"/>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Fighter" domainClass="resources::Fighter" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='CarrierAircraft']">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Recon" domainClass="resources::Recon" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='CarrierAircraft']">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="Helicopter" domainClass="resources::Helicopter" reusedBorderedNodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile'] //@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']" inheritsAncestorFilters="false" importedMapping="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='CarrierAircraft']">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Ship">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Frigate" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Frigate']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Frigate" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Destroyer" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Destroyer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Destroyer" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AircraftCarrier" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='AircraftCarrier']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::AircraftCarrier" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Ammunition">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Missile" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Missile']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Missile" referenceName="ammunitions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Shell" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Shell']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Shell" referenceName="ammunitions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Torpedo" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Vehicle']/@borderedNodeMappings[name='Torpedo']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Torpedo" referenceName="ammunitions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Drone">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Strike" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Strike']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Strike" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Reconnaissance" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Reconnaissance']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Reconnaissance" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Transport" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Transport']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Transport" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="CarrierAircraft">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Fighter" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Fighter']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Fighter" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Recon" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Recon']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Recon" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Helicopter" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ResourceModel']/@ownedRepresentations[name='ResourceDiagram']/@defaultLayer/@nodeMappings[name='Helicopter']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="resources::Helicopter" referenceName="vehicles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
