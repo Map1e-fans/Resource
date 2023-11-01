@@ -9,26 +9,27 @@
   <foreignModel>resources.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Resources" disposableProviderFactory="true" ecorePackage="resources.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="resources.ecore#//Status">
-      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/fdj"/>
-      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/phy"/>
-      <genEnumLiterals ecoreEnumLiteral="resources.ecore#//Status/gee"/>
-    </genEnums>
     <genClasses ecoreClass="resources.ecore#//Resources">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resources.ecore#//Resources/vehicles"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resources.ecore#//Resources/name"/>
     </genClasses>
-    <genClasses ecoreClass="resources.ecore#//Ship"/>
+    <genClasses ecoreClass="resources.ecore#//Ship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resources.ecore#//Ship/drone"/>
+    </genClasses>
     <genClasses ecoreClass="resources.ecore#//Ammunition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resources.ecore#//Ammunition/amount"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resources.ecore#//Ammunition/name"/>
     </genClasses>
     <genClasses ecoreClass="resources.ecore#//Drone"/>
     <genClasses ecoreClass="resources.ecore#//CarrierAircraft"/>
-    <genClasses ecoreClass="resources.ecore#//Frigate"/>
-    <genClasses ecoreClass="resources.ecore#//Destroyer"/>
+    <genClasses ecoreClass="resources.ecore#//Frigate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resources.ecore#//Frigate/helicopter"/>
+    </genClasses>
+    <genClasses ecoreClass="resources.ecore#//Destroyer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resources.ecore#//Destroyer/helicopter"/>
+    </genClasses>
     <genClasses ecoreClass="resources.ecore#//AircraftCarrier">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resources.ecore#//AircraftCarrier/carrieraircrafts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resources.ecore#//AircraftCarrier/carrieraircraft"/>
     </genClasses>
     <genClasses ecoreClass="resources.ecore#//Missile"/>
     <genClasses ecoreClass="resources.ecore#//Shell"/>

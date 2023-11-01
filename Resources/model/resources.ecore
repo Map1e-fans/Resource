@@ -6,18 +6,27 @@
         eType="#//Vehicle" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ship" abstract="true" eSuperTypes="#//Vehicle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ship" abstract="true" eSuperTypes="#//Vehicle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drone" upperBound="-1"
+        eType="#//Drone"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ammunition" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Drone" abstract="true" eSuperTypes="#//Vehicle"/>
   <eClassifiers xsi:type="ecore:EClass" name="CarrierAircraft" abstract="true" eSuperTypes="#//Vehicle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Frigate" eSuperTypes="#//Ship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Destroyer" eSuperTypes="#//Ship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Frigate" eSuperTypes="#//Ship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="helicopter" upperBound="-1"
+        eType="#//Helicopter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Destroyer" eSuperTypes="#//Ship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="helicopter" upperBound="-1"
+        eType="#//Helicopter"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AircraftCarrier" eSuperTypes="#//Ship">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="carrieraircrafts" upperBound="-1"
-        eType="#//CarrierAircraft" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="carrieraircraft" upperBound="-1"
+        eType="#//CarrierAircraft"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Missile" eSuperTypes="#//Ammunition"/>
   <eClassifiers xsi:type="ecore:EClass" name="Shell" eSuperTypes="#//Ammunition"/>
@@ -28,11 +37,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Fighter" eSuperTypes="#//CarrierAircraft"/>
   <eClassifiers xsi:type="ecore:EClass" name="Recon" eSuperTypes="#//CarrierAircraft"/>
   <eClassifiers xsi:type="ecore:EClass" name="Helicopter" eSuperTypes="#//CarrierAircraft"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="Status">
-    <eLiterals name="fdj"/>
-    <eLiterals name="phy" value="1"/>
-    <eLiterals name="gee" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ammunitions" upperBound="-1"

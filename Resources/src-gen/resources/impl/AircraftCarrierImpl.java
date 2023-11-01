@@ -4,15 +4,11 @@ package resources.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import resources.AircraftCarrier;
 import resources.CarrierAircraft;
@@ -26,21 +22,21 @@ import resources.ResourcesPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link resources.impl.AircraftCarrierImpl#getCarrieraircrafts <em>Carrieraircrafts</em>}</li>
+ *   <li>{@link resources.impl.AircraftCarrierImpl#getCarrieraircraft <em>Carrieraircraft</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	/**
-	 * The cached value of the '{@link #getCarrieraircrafts() <em>Carrieraircrafts</em>}' containment reference list.
+	 * The cached value of the '{@link #getCarrieraircraft() <em>Carrieraircraft</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCarrieraircrafts()
+	 * @see #getCarrieraircraft()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CarrierAircraft> carrieraircrafts;
+	protected EList<CarrierAircraft> carrieraircraft;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,26 +62,12 @@ public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CarrierAircraft> getCarrieraircrafts() {
-		if (carrieraircrafts == null) {
-			carrieraircrafts = new EObjectContainmentEList<CarrierAircraft>(CarrierAircraft.class, this,
-					ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS);
+	public EList<CarrierAircraft> getCarrieraircraft() {
+		if (carrieraircraft == null) {
+			carrieraircraft = new EObjectResolvingEList<CarrierAircraft>(CarrierAircraft.class, this,
+					ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFT);
 		}
-		return carrieraircrafts;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS:
-			return ((InternalEList<?>) getCarrieraircrafts()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return carrieraircraft;
 	}
 
 	/**
@@ -96,8 +78,8 @@ public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS:
-			return getCarrieraircrafts();
+		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFT:
+			return getCarrieraircraft();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +93,9 @@ public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS:
-			getCarrieraircrafts().clear();
-			getCarrieraircrafts().addAll((Collection<? extends CarrierAircraft>) newValue);
+		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFT:
+			getCarrieraircraft().clear();
+			getCarrieraircraft().addAll((Collection<? extends CarrierAircraft>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +109,8 @@ public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS:
-			getCarrieraircrafts().clear();
+		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFT:
+			getCarrieraircraft().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,8 +124,8 @@ public class AircraftCarrierImpl extends ShipImpl implements AircraftCarrier {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFTS:
-			return carrieraircrafts != null && !carrieraircrafts.isEmpty();
+		case ResourcesPackage.AIRCRAFT_CARRIER__CARRIERAIRCRAFT:
+			return carrieraircraft != null && !carrieraircraft.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

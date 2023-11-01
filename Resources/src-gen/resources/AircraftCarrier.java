@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link resources.AircraftCarrier#getCarrieraircrafts <em>Carrieraircrafts</em>}</li>
+ *   <li>{@link resources.AircraftCarrier#getCarrieraircraft <em>Carrieraircraft</em>}</li>
  * </ul>
  *
  * @see resources.ResourcesPackage#getAircraftCarrier()
@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface AircraftCarrier extends Ship {
 	/**
-	 * Returns the value of the '<em><b>Carrieraircrafts</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Carrieraircraft</b></em>' reference list.
 	 * The list contents are of type {@link resources.CarrierAircraft}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Carrieraircrafts</em>' containment reference list.
-	 * @see resources.ResourcesPackage#getAircraftCarrier_Carrieraircrafts()
-	 * @model containment="true"
+	 * @return the value of the '<em>Carrieraircraft</em>' reference list.
+	 * @see resources.ResourcesPackage#getAircraftCarrier_Carrieraircraft()
+	 * @model
 	 * @generated
 	 */
-	EList<CarrierAircraft> getCarrieraircrafts();
+	EList<CarrierAircraft> getCarrieraircraft();
 
 } // AircraftCarrier

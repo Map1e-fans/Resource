@@ -4,7 +4,6 @@ package resources;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -196,13 +195,22 @@ public interface ResourcesPackage extends EPackage {
 	int SHIP__AMOUNT = VEHICLE__AMOUNT;
 
 	/**
+	 * The feature id for the '<em><b>Drone</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHIP__DRONE = VEHICLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Ship</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SHIP_FEATURE_COUNT = VEHICLE_FEATURE_COUNT + 0;
+	int SHIP_FEATURE_COUNT = VEHICLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Ship</em>' class.
@@ -407,13 +415,31 @@ public interface ResourcesPackage extends EPackage {
 	int FRIGATE__AMOUNT = SHIP__AMOUNT;
 
 	/**
+	 * The feature id for the '<em><b>Drone</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRIGATE__DRONE = SHIP__DRONE;
+
+	/**
+	 * The feature id for the '<em><b>Helicopter</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRIGATE__HELICOPTER = SHIP_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Frigate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FRIGATE_FEATURE_COUNT = SHIP_FEATURE_COUNT + 0;
+	int FRIGATE_FEATURE_COUNT = SHIP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Frigate</em>' class.
@@ -462,13 +488,31 @@ public interface ResourcesPackage extends EPackage {
 	int DESTROYER__AMOUNT = SHIP__AMOUNT;
 
 	/**
+	 * The feature id for the '<em><b>Drone</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESTROYER__DRONE = SHIP__DRONE;
+
+	/**
+	 * The feature id for the '<em><b>Helicopter</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESTROYER__HELICOPTER = SHIP_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Destroyer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESTROYER_FEATURE_COUNT = SHIP_FEATURE_COUNT + 0;
+	int DESTROYER_FEATURE_COUNT = SHIP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Destroyer</em>' class.
@@ -517,13 +561,22 @@ public interface ResourcesPackage extends EPackage {
 	int AIRCRAFT_CARRIER__AMOUNT = SHIP__AMOUNT;
 
 	/**
-	 * The feature id for the '<em><b>Carrieraircrafts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Drone</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AIRCRAFT_CARRIER__CARRIERAIRCRAFTS = SHIP_FEATURE_COUNT + 0;
+	int AIRCRAFT_CARRIER__DRONE = SHIP__DRONE;
+
+	/**
+	 * The feature id for the '<em><b>Carrieraircraft</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AIRCRAFT_CARRIER__CARRIERAIRCRAFT = SHIP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Aircraft Carrier</em>' class.
@@ -1012,16 +1065,6 @@ public interface ResourcesPackage extends EPackage {
 	int HELICOPTER_OPERATION_COUNT = CARRIER_AIRCRAFT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link resources.Status <em>Status</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see resources.Status
-	 * @see resources.impl.ResourcesPackageImpl#getStatus()
-	 * @generated
-	 */
-	int STATUS = 18;
-
-	/**
 	 * Returns the meta object for class '{@link resources.Resources <em>Resources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1062,6 +1105,17 @@ public interface ResourcesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getShip();
+
+	/**
+	 * Returns the meta object for the reference list '{@link resources.Ship#getDrone <em>Drone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Drone</em>'.
+	 * @see resources.Ship#getDrone()
+	 * @see #getShip()
+	 * @generated
+	 */
+	EReference getShip_Drone();
 
 	/**
 	 * Returns the meta object for class '{@link resources.Ammunition <em>Ammunition</em>}'.
@@ -1126,6 +1180,17 @@ public interface ResourcesPackage extends EPackage {
 	EClass getFrigate();
 
 	/**
+	 * Returns the meta object for the reference list '{@link resources.Frigate#getHelicopter <em>Helicopter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Helicopter</em>'.
+	 * @see resources.Frigate#getHelicopter()
+	 * @see #getFrigate()
+	 * @generated
+	 */
+	EReference getFrigate_Helicopter();
+
+	/**
 	 * Returns the meta object for class '{@link resources.Destroyer <em>Destroyer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1134,6 +1199,17 @@ public interface ResourcesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDestroyer();
+
+	/**
+	 * Returns the meta object for the reference list '{@link resources.Destroyer#getHelicopter <em>Helicopter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Helicopter</em>'.
+	 * @see resources.Destroyer#getHelicopter()
+	 * @see #getDestroyer()
+	 * @generated
+	 */
+	EReference getDestroyer_Helicopter();
 
 	/**
 	 * Returns the meta object for class '{@link resources.AircraftCarrier <em>Aircraft Carrier</em>}'.
@@ -1146,15 +1222,15 @@ public interface ResourcesPackage extends EPackage {
 	EClass getAircraftCarrier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link resources.AircraftCarrier#getCarrieraircrafts <em>Carrieraircrafts</em>}'.
+	 * Returns the meta object for the reference list '{@link resources.AircraftCarrier#getCarrieraircraft <em>Carrieraircraft</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Carrieraircrafts</em>'.
-	 * @see resources.AircraftCarrier#getCarrieraircrafts()
+	 * @return the meta object for the reference list '<em>Carrieraircraft</em>'.
+	 * @see resources.AircraftCarrier#getCarrieraircraft()
 	 * @see #getAircraftCarrier()
 	 * @generated
 	 */
-	EReference getAircraftCarrier_Carrieraircrafts();
+	EReference getAircraftCarrier_Carrieraircraft();
 
 	/**
 	 * Returns the meta object for class '{@link resources.Missile <em>Missile</em>}'.
@@ -1290,16 +1366,6 @@ public interface ResourcesPackage extends EPackage {
 	EAttribute getVehicle_Amount();
 
 	/**
-	 * Returns the meta object for enum '{@link resources.Status <em>Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Status</em>'.
-	 * @see resources.Status
-	 * @generated
-	 */
-	EEnum getStatus();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1359,6 +1425,14 @@ public interface ResourcesPackage extends EPackage {
 		EClass SHIP = eINSTANCE.getShip();
 
 		/**
+		 * The meta object literal for the '<em><b>Drone</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SHIP__DRONE = eINSTANCE.getShip_Drone();
+
+		/**
 		 * The meta object literal for the '{@link resources.impl.AmmunitionImpl <em>Ammunition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1415,6 +1489,14 @@ public interface ResourcesPackage extends EPackage {
 		EClass FRIGATE = eINSTANCE.getFrigate();
 
 		/**
+		 * The meta object literal for the '<em><b>Helicopter</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FRIGATE__HELICOPTER = eINSTANCE.getFrigate_Helicopter();
+
+		/**
 		 * The meta object literal for the '{@link resources.impl.DestroyerImpl <em>Destroyer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1423,6 +1505,14 @@ public interface ResourcesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DESTROYER = eINSTANCE.getDestroyer();
+
+		/**
+		 * The meta object literal for the '<em><b>Helicopter</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DESTROYER__HELICOPTER = eINSTANCE.getDestroyer_Helicopter();
 
 		/**
 		 * The meta object literal for the '{@link resources.impl.AircraftCarrierImpl <em>Aircraft Carrier</em>}' class.
@@ -1435,12 +1525,12 @@ public interface ResourcesPackage extends EPackage {
 		EClass AIRCRAFT_CARRIER = eINSTANCE.getAircraftCarrier();
 
 		/**
-		 * The meta object literal for the '<em><b>Carrieraircrafts</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Carrieraircraft</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AIRCRAFT_CARRIER__CARRIERAIRCRAFTS = eINSTANCE.getAircraftCarrier_Carrieraircrafts();
+		EReference AIRCRAFT_CARRIER__CARRIERAIRCRAFT = eINSTANCE.getAircraftCarrier_Carrieraircraft();
 
 		/**
 		 * The meta object literal for the '{@link resources.impl.MissileImpl <em>Missile</em>}' class.
@@ -1565,16 +1655,6 @@ public interface ResourcesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VEHICLE__AMOUNT = eINSTANCE.getVehicle_Amount();
-
-		/**
-		 * The meta object literal for the '{@link resources.Status <em>Status</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see resources.Status
-		 * @see resources.impl.ResourcesPackageImpl#getStatus()
-		 * @generated
-		 */
-		EEnum STATUS = eINSTANCE.getStatus();
 
 	}
 

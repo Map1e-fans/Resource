@@ -4,7 +4,6 @@ package resources.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -26,7 +25,6 @@ import resources.ResourcesFactory;
 import resources.ResourcesPackage;
 import resources.Shell;
 import resources.Ship;
-import resources.Status;
 import resources.Strike;
 import resources.Torpedo;
 import resources.Transport;
@@ -166,13 +164,6 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 	private EClass vehicleEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum statusEEnum = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -277,6 +268,15 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getShip_Drone() {
+		return (EReference) shipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAmmunition() {
 		return ammunitionEClass;
 	}
@@ -331,8 +331,26 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFrigate_Helicopter() {
+		return (EReference) frigateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDestroyer() {
 		return destroyerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDestroyer_Helicopter() {
+		return (EReference) destroyerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -349,7 +367,7 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAircraftCarrier_Carrieraircrafts() {
+	public EReference getAircraftCarrier_Carrieraircraft() {
 		return (EReference) aircraftCarrierEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -475,15 +493,6 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getStatus() {
-		return statusEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ResourcesFactory getResourcesFactory() {
 		return (ResourcesFactory) getEFactoryInstance();
 	}
@@ -513,6 +522,7 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 		createEAttribute(resourcesEClass, RESOURCES__NAME);
 
 		shipEClass = createEClass(SHIP);
+		createEReference(shipEClass, SHIP__DRONE);
 
 		ammunitionEClass = createEClass(AMMUNITION);
 		createEAttribute(ammunitionEClass, AMMUNITION__AMOUNT);
@@ -523,11 +533,13 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 		carrierAircraftEClass = createEClass(CARRIER_AIRCRAFT);
 
 		frigateEClass = createEClass(FRIGATE);
+		createEReference(frigateEClass, FRIGATE__HELICOPTER);
 
 		destroyerEClass = createEClass(DESTROYER);
+		createEReference(destroyerEClass, DESTROYER__HELICOPTER);
 
 		aircraftCarrierEClass = createEClass(AIRCRAFT_CARRIER);
-		createEReference(aircraftCarrierEClass, AIRCRAFT_CARRIER__CARRIERAIRCRAFTS);
+		createEReference(aircraftCarrierEClass, AIRCRAFT_CARRIER__CARRIERAIRCRAFT);
 
 		missileEClass = createEClass(MISSILE);
 
@@ -551,9 +563,6 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 		createEAttribute(vehicleEClass, VEHICLE__NAME);
 		createEReference(vehicleEClass, VEHICLE__AMMUNITIONS);
 		createEAttribute(vehicleEClass, VEHICLE__AMOUNT);
-
-		// Create enums
-		statusEEnum = createEEnum(STATUS);
 	}
 
 	/**
@@ -611,6 +620,9 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(shipEClass, Ship.class, "Ship", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getShip_Drone(), this.getDrone(), null, "drone", null, 0, -1, Ship.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(ammunitionEClass, Ammunition.class, "Ammunition", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -625,15 +637,21 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(frigateEClass, Frigate.class, "Frigate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFrigate_Helicopter(), this.getHelicopter(), null, "helicopter", null, 0, -1, Frigate.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(destroyerEClass, Destroyer.class, "Destroyer", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDestroyer_Helicopter(), this.getHelicopter(), null, "helicopter", null, 0, -1,
+				Destroyer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aircraftCarrierEClass, AircraftCarrier.class, "AircraftCarrier", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAircraftCarrier_Carrieraircrafts(), this.getCarrierAircraft(), null, "carrieraircrafts", null,
-				0, -1, AircraftCarrier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAircraftCarrier_Carrieraircraft(), this.getCarrierAircraft(), null, "carrieraircraft", null,
+				0, -1, AircraftCarrier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(missileEClass, Missile.class, "Missile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -664,12 +682,6 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVehicle_Amount(), ecorePackage.getEInt(), "amount", null, 0, 1, Vehicle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(statusEEnum, Status.class, "Status");
-		addEEnumLiteral(statusEEnum, Status.FDJ);
-		addEEnumLiteral(statusEEnum, Status.PHY);
-		addEEnumLiteral(statusEEnum, Status.GEE);
 
 		// Create resource
 		createResource(eNS_URI);

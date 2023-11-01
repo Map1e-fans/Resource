@@ -8,9 +8,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import resources.Frigate;
+import resources.ResourcesPackage;
 
 /**
  * This is the item provider adapter for a {@link resources.Frigate} object.
@@ -40,8 +42,24 @@ public class FrigateItemProvider extends ShipItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addHelicopterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Helicopter feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHelicopterPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Frigate_helicopter_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Frigate_helicopter_feature",
+								"_UI_Frigate_type"),
+						ResourcesPackage.Literals.FRIGATE__HELICOPTER, true, false, true, null, null, null));
 	}
 
 	/**
