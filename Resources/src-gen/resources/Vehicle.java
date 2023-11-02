@@ -66,7 +66,7 @@ public interface Vehicle extends EObject {
 	 * @return the value of the '<em>Amount</em>' attribute.
 	 * @see #setAmount(int)
 	 * @see resources.ResourcesPackage#getVehicle_Amount()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getAmount();

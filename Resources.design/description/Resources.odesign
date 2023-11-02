@@ -143,6 +143,13 @@
                           </firstModelOperations>
                         </initialOperation>
                       </controls>
+                      <controls xsi:type="properties:TextDescription" name="FrigateAmount" labelExpression="amount">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="amount" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -168,6 +175,13 @@
                         <initialOperation>
                           <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
                             <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                      <controls xsi:type="properties:TextDescription" name="FrigateAmount" labelExpression="amount">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="amount" valueExpression="var:newValue"/>
                           </firstModelOperations>
                         </initialOperation>
                       </controls>
@@ -415,7 +429,7 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:source.oclIsKindOf(resources::AircraftCarrier)">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsKindOf(resources::CarrierAircraft)">
                   <subModelOperations xsi:type="tool_1:MoveElement" newContainerExpression="var:source" featureName="carrieraircraft"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:target.oclIsKindOf(resources::Drone)">

@@ -626,7 +626,7 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 
 		initEClass(ammunitionEClass, Ammunition.class, "Ammunition", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAmmunition_Amount(), ecorePackage.getEInt(), "amount", null, 0, 1, Ammunition.class,
+		initEAttribute(getAmmunition_Amount(), ecorePackage.getEInt(), "amount", null, 1, 1, Ammunition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAmmunition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ammunition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -680,7 +680,7 @@ public class ResourcesPackageImpl extends EPackageImpl implements ResourcesPacka
 		initEReference(getVehicle_Ammunitions(), this.getAmmunition(), null, "ammunitions", null, 0, -1, Vehicle.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVehicle_Amount(), ecorePackage.getEInt(), "amount", null, 0, 1, Vehicle.class, !IS_TRANSIENT,
+		initEAttribute(getVehicle_Amount(), ecorePackage.getEInt(), "amount", null, 1, 1, Vehicle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

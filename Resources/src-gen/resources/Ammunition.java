@@ -29,7 +29,7 @@ public interface Ammunition extends EObject {
 	 * @return the value of the '<em>Amount</em>' attribute.
 	 * @see #setAmount(int)
 	 * @see resources.ResourcesPackage#getAmmunition_Amount()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getAmount();
