@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/Resources.feature_1.0.0.202311021807.jar" id="Resources.feature" version="1.0.0.202311021807">
+      <category name="resources"/>
+   </feature>
+   <category-def name="resources" label="resources"/>
+</site>
